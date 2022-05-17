@@ -6,7 +6,7 @@
 
 // fs.appendFileSync("notes.txt", "\nSecond Line");
 
-const myutils = require("./utils");
+const myutils = require("../utils");
 
 const name = myutils.param1;
 const addfunc = myutils.addmethod;
