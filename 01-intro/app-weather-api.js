@@ -11,12 +11,12 @@ import { accesskey } from "./accesskey.js";
 const url =
   "http://api.weatherstack.com/current?access_key=" +
   accesskey +
-  "&query=Chennai";
+  "&query=Mumbai";
 request({ url: url, json: true }, (error, response) => {
   if (error) {
     console.log(chalk.bgRed("Error occurred: " + error));
   } else if (response.body.success === false) {
-    console.log(chalk.red("Error occurred: " + response.body.error.info));
+    console.log(chalk.bgRed("Error occurred: " + response.body.error.info));
   } else if (response.body.success !== false) {
     //console.log(response.body);
     console.log(
