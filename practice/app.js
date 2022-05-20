@@ -31,7 +31,7 @@ app.get("/weather", (req, res) => {
       ". It is currently " +
       response.body.current.temperature +
       " degrees.";
-    return s;
+    return res.send(s);
   });
   res.send("<h1>Weather of..</h1>");
 });

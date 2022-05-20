@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,6 +8,18 @@
     <script src="js/client.js"></script>
   </head>
   <body>
-    <h1>Welcome to nodeApp</h1>
+    <div class="main-content">
+    {{>header}}
+    <p>Know the weather of place</p>
+    <form action="/weather">
+    <input placeholder="City" name ="city" />
+    <button type="submit">Submit</button>
+    </form>
+    {{forecast}}
+    <br />
+    {{city}}
+    </div>
+    {{>footer}}
+
   </body>
 </html>
